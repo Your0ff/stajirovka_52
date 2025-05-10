@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница сотрудника</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/faker/3.1.0/faker.min.js"></script>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            {{#each employee}}
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <div class="w-48 h-48 rounded-full overflow-hidden">
+                    <img src="{{photo}}" class="w-full h-full object-cover" id="">
+                </div>
+                <div class="flex-1">
+                    <h1 class="text-3xl font-bold mb-2" id="">{{name}}</h1>
+                    <p class="text-gray-600 mb-4" id="">{{city}}</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="">
+                            <img src="/vk-svgrepo-com.svg" class="w-6 h-6" alt="VK icon">
+                        </a>
+                        <a href="#" class="">
+                            <img src="/telegram-svgrepo-com.svg" class="w-6 h-6" alt="Telegram icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-2xl font-bold mt-6 mb-4">Стек технологий</h2>
+            <div class="flex flex-wrap gap-2">
+                {{#each tags}}
+                <span class="px-3 py-1 bg-blue-100 text-blue-900 rounded-full font-medium hover:bg-blue-200 transition-colors duration-200 cursor-pointer shadow-sm">{{this}}</span>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+
+        <!-- Проекты -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 class="text-2xl font-bold mb-4">Участие в проектах</h2>
+            <div class="space-y-4">
+                {{#each projects}}
+                <div class="border-l-4 border-blue-500 pl-4">
+                    <h3 class="font-bold">{{name}}</h3>
+                    <p class="text-gray-600">{{description}}</p>
+                    <p class="text-sm text-gray-500">{{year}}</p>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <!-- Отзывы -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">Отзывы</h2>
+            <div class="space-y-4">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="italic text-gray-700">"Отличный специалист, всегда выполняет работу в срок и с высоким качеством."</p>
+                    <p class="text-right text-sm text-gray-500 mt-2">- Петр Петров, Руководитель проекта</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="italic text-gray-700">"Профессионал своего дела, всегда готов помочь коллегам."</p>
+                    <p class="text-right text-sm text-gray-500 mt-2">- Анна Сидорова, Коллега</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/js/index.js"></script>
+</body>
+</html>
