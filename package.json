@@ -10,9 +10,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.6",
     "express": "^5.1.0",
     "hbs": "^4.2.0",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "tailwindcss": "^4.1.6"
   },
   "devDependencies": {
     "@faker-js/faker": "^9.7.0"
