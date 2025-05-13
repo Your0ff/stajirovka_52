@@ -7,12 +7,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/faker/3.1.0/faker.min.js"></script> 
     <link rel="stylesheet" href="/output.css">
 </head>
-<body class="bg-gray-100">
+<body class="bg-white">
+    <header>
+        <nav class="">
+            <div class="">
+                <a href="" class="">
+                    <img src="/public/logo_kaboomdev.png" alt="" class="">
+                </a>
+            </div>
+            <div class="">
+
+            </div>
+        </nav>
+    </header>
+    
     <div class="container mx-auto px-4 py-8">
-        {{!-- bg-conic-180 from-indigo-600 via-indigo-50 to-indigo-600 --}}
-        {{!-- bg-linear-to-tr/srgb from-white from-80% to-purple-700 --}}
-        <div class="relative overflow-hidden bg-white rounded-4xl shadow-lg p-6 mb-6">
-            <img class="absolute top-0 right-0 h-100" src="/Ellipse 1.svg" alt="">
+        <div class="relative overflow-hidden bg-gray-200 rounded-4xl shadow-lg p-6 mb-6 bg-conic-180 from-indigo-600 via-indigo-50 to-indigo-600">
+            <img class="absolute z-1 top-0 right-0" src="" alt="">
             {{#each employee}}
             <div class="flex flex-col md:flex-row items-center gap-6">
                 <div class="w-48 h-48 rounded-full overflow-hidden">
@@ -41,7 +52,7 @@
         </div>
 
         <!-- Проекты -->
-        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+        <div class="rounded-4xl shadow-lg p-6 mb-6 bg-linear-to-tr/srgb from-gray-200 from-50% to-purple-700">
             <h2 class="text-2xl font-bold mb-4">Участие в проектах</h2>
             <div class="space-y-4">
                 {{#each projects}}
@@ -53,23 +64,5 @@
                 {{/each}}
             </div>
         </div>
-
-        <!-- Отзывы -->
-        <div class="bg-white rounded-lg shadow-lg p-6">
-            <h2 class="text-2xl font-bold mb-4">Отзывы</h2>
-            <div class="space-y-4">
-                <div class="bg-gray-50 p-4 rounded-lg">
-                    <p class="italic text-gray-700">"Отличный специалист, всегда выполняет работу в срок и с высоким качеством."</p>
-                    <p class="text-right text-sm text-gray-500 mt-2">- Петр Петров, Руководитель проекта</p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg">
-                    <p class="italic text-gray-700">"Профессионал своего дела, всегда готов помочь коллегам."</p>
-                    <p class="text-right text-sm text-gray-500 mt-2">- Анна Сидорова, Коллега</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="/public/js/index.js"></script>
 </body>
 </html>
