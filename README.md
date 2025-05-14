@@ -14,13 +14,12 @@ npm i
 ```
 
 <h1>Создать второй терминал</h1>
-1. В первом написать:
+В первом написать:
 
 ```bash
 npm start
 ```
-
-2. Во втором написать:
+Во втором написать:
 
 ```bash
 npx @tailwindcss/cli -i ./public/style.css -o ./public/output.css --watch
